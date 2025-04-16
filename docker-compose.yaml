@@ -1,0 +1,10 @@
+services:
+  dev-servers:
+    image: ${DESKTOP_PLUGIN_IMAGE}
+    volumes:
+      - ~/.ssh:/root/.ssh:ro
+      - docker-extension-config:/etc/docker-remote
+volumes:
+  docker-extension-config:
+    driver: local
+
